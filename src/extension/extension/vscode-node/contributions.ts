@@ -42,6 +42,7 @@ import { InlineCompletionContribution } from '../../typescriptContext/vscode-nod
 import * as workspaceChunkSearchContribution from '../../workspaceChunkSearch/node/workspaceChunkSearch.contribution';
 import * as workspaceIndexingContribution from '../../workspaceChunkSearch/vscode-node/workspaceChunkSearch.contribution';
 import { WorkspaceRecorderFeature } from '../../workspaceRecorder/vscode-node/workspaceRecorderFeature';
+import { SampleViewContribution } from '../../sampleView/vscode-node';
 import vscodeContributions from '../vscode/contributions';
 
 // ###################################################################################################
@@ -68,8 +69,9 @@ export const vscodeNodeContributions: IExtensionContributionFactory[] = [
 	asContributionFactory(SettingsSchemaFeature),
 	asContributionFactory(WorkspaceRecorderFeature),
 	asContributionFactory(SurveyCommandContribution),
-	asContributionFactory(FeedbackCommandContribution),
-	asContributionFactory(InlineCompletionContribution),
+        asContributionFactory(FeedbackCommandContribution),
+        asContributionFactory(SampleViewContribution),
+        asContributionFactory(InlineCompletionContribution),
 	asContributionFactory(SearchPanelCommands),
 	asContributionFactory(ChatQuotaContribution),
 	asContributionFactory(NotebookFollowCommands),
